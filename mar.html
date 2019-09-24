@@ -1,0 +1,1832 @@
+<html oncopy="return true" oncut="return false" onpaste="return false">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="google-site-verification" content="K_8JzqRwbWX8hCJeO2r1OaT4Gl9koXVpWG_DwXABsHs" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Look In MENA" />
+
+    <meta property="fb:app_id" content="325859175013010" />
+    <meta property="fb:pages" content="221965491295323" />
+
+    <title>
+        Marketing </title>
+
+    <!-- FAVICON AND APPLE TOUCH -->
+    <link rel="shortcut icon" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/images/favicon.png">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+
+
+    <!-- ALL NORMAL STYLES IN LIM -->
+    <link rel="stylesheet" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/plugins/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://lookinmena.com/wp-content/themes/lookinmena/assets/plugins/animations/animate.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="./assets/css/mas.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113878674-1"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script type="text/javascript" src="https://lookinmena.com/wp-content/themes/lookinmena/assets/js/mini_lib.js?v1.07"></script>
+    <script type="text/javascript" src="https://lookinmena.com/wp-content/themes/lookinmena/assets/js/mini_app.js?v1.13"></script>
+
+    <script src="https://lookinmena.com/wp-content/themes/lookinmena/front_end/controllers/scholarships/scholarships_tax.js"></script>
+    <script src="https://lookinmena.com/wp-content/themes/lookinmena/front_end/controllers/online_activities/online_activities_tax.js"></script>
+
+
+
+</head>
+
+<body class="sticky-header header-white scrollbar_style" ng-app="lim" id="scrollbar_style">
+    <div id="main-container" ng-controller="main_controller">
+        <div id="main-header">
+            <!-- HEADER -->
+            <nav class="navbar  navbar-fixed-top desktophomepage " id="sticky-header " style="background-color: #ffff;">
+                <div class="container">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                <a href="https://lookinmena.com">
+                                    <img src="https://lookinmena.com/wp-content/themes/lookinmena/assets/images/favicon.png" alt="lookinMENA logo" width="{{is_logged_in ? '100px' : 'auto'}}">
+                                </a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <a id="mobile-menu-button" class="waves" href="#"><i class="fa fa-angle-down"></i></a>
+                                    <ul class="menu clearfix" id="menu">
+
+                                        <!-- ngIf: !is_logged_in -->
+                                        <li class="login m-t-7" ng-if="!is_logged_in">
+                                            <!--<a id="sign_in" class="btn bordered" href="#login-form-container">أنشئ حساب</a>-->
+                                            <a id="sign_in" class="btn bordered" href="#login-form-container">أنشئ حساب</a>
+                                            <div id="login-form-container">
+                                                <!--<h4 style="box-shadow: 0px 2px 5px 1px grey; background-color: #002626"> إنشاء حساب مجاني</h4>-->
+                                                <h4 style="box-shadow: 0px 2px 5px 1px grey; background-color: #002626">إنشاء حساب مجاني</h4>
+                                                <form class="login-form ng-pristine ng-valid">
+                                                    <fieldset>
+                                                        <!--<h5>عند إنشاء حساب سيصبح بإمكانك</h5><br>-->
+                                                        <h5>عند إنشاء حساب سيصبح بإمكانك</h5><br>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="bell-style"><i class="fa fa-bell"></i></div>
+                                                                <!--<h6 class="h6h6">تحديد الاشعارات التي ترغب باستلامها</h6>-->
+                                                                <h6 class="h6h6">تحديد الاشعارات التي ترغب باستلامها</h6>
+                                                            </div>
+                                                            <div class="col-sm-6">
+
+                                                                <div class="pointer-style"><i class="fa fa-mouse-pointer"></i></div>
+                                                                <!--<h6 class="h6h6">معرفة طريقة المشاركة بالفرص التعليمية والترفيهية </h6>-->
+                                                                <h6 class="h6h6">معرفة طريقة المشاركة بالفرص التعليميةوالترفيهية</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="loglog">
+                                                            <!--<button class="btn btn-default-1 waves fbColor" ng-click="fb_log()"> أنشئ حساباً عن طريق الفيسبوك <i class="fa fa-facebook"></i></button>
+                                                                <button class="btn btn-default-1 waves gmColor" ng-click="gm_log()" style="background-color: #bb4232;"> أنشئ حساباً عن طريق الجيميل <i class="fa fa-google"></i></button>-->
+                                                            <button class="btn btn-default-1 waves fbColor" ng-click="fb_log()"> أنشئ حساباً عن طريق الفيسبوك <i class="fa fa-facebook"></i></button>
+                                                            <button class="btn btn-default-1 waves gmColor" ng-click="gm_log()" style="background-color: #bb4232;"> أنشئ حساباً عن طريق الجيميل <i class="fa fa-google"></i></button>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                            <!-- login-form-container -->
+                                        </li>
+                                        <!-- end ngIf: !is_logged_in -->
+
+                                        <!--profile dropdown-->
+                                        <li class="profile-dropdown" ng-if="is_logged_in">
+
+                                            <button class="btn btn-default-1 waves" type="button" data-toggle="dropdown"><img style="width: 50px;" ng-src="{{user_pic}}"> {{user_name}}
+                                                </button>
+                                            <ul class="dropdown-menu">
+                                                <!--<li><a href="/profile">حسابك</a>-->
+                                                <li><a href="/profile">حسابك</a>
+                                                </li>
+                                                <!--<li><a class="hand" ng-click="logout_user()">تسجيل الخروج</a>-->
+                                                <li><a class="hand" ng-click="logout_user()">تسجيل الخروج</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!--notifications dropdown-->
+                                        <li class="notification-dropdown" ng-if="is_logged_in">
+                                            <button class="btn btn-default-1 waves" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" ng-click="view_noti()">
+                                                    <i class="red_bill" aria-hidden="true" ng-class="{'fa fa-bell-o':unseen_noti == 0, 'fa fa-bell':unseen_noti != 0}">{{unseen_noti != 0?unseen_noti:''}}</i>
+                                                </button>
+
+                                            <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" style="height: 450px;">
+                                                <div class="notification-heading">
+                                                    <!--<h5 class="menu-title">اشعارات</h5>-->
+                                                    <h5 class="menu-title">اشعارات</h5>
+                                                </div>
+                                                <li class="divider"></li>
+                                                <div id="scrollbar_style" class="notifications-wrapper" style="overflow: auto;height: 85%">
+                                                    <div ng-repeat="noti in user_notifications| orderBy: 'post_created': true" ng-class="{'not_opened': noti.post_opened == 0}">
+                                                        <a href="{{noti.post_link}}" ng-click="open_noti(noti, $index)">
+                                                            <div class="notification-item">
+                                                                <span class="item-title" ng-bind-html="noti.post_title"></span> <small>({{noti.post_type}})</small>
+                                                            </div>
+                                                        </a>
+                                                        <li class="divider"></li>
+
+                                                    </div>
+
+                                                </div>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </ul>
+
+                                <!--المنح -->
+
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+
+                                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                    aria-haspopup="true" aria-expanded="false">المنح الجامعية <span
+                                                            class="caret"></span></a>-->
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">المنح الجامعية<span
+                                                    class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <!--<li><a
+                                                                href="https://lookinmena.com/scholarships_categories/%D8%A8%D9%83%D8%A7%D9%84%D9%88%D8%B1%D9%8A%D9%88%D8%B3">بكالوريوس</a>
+                                                </li>-->
+                                            <li><a href="https://lookinmena.com/scholarships_categories/%D8%A8%D9%83%D8%A7%D9%84%D9%88%D8%B1%D9%8A%D9%88%D8%B3">بكالوريوس</a>
+                                            </li>
+                                            <!--<li><a href="https://lookinmena.com/scholarships_categories/master">ماجستير</a>-->
+                                            <li><a href="https://lookinmena.com/scholarships_categories/master">ماجستير</a>
+                                            </li>
+                                            <!--<li><a
+                                                                href="https://lookinmena.com/scholarships_categories/%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A7%D9%87">دكتوراه</a>
+                                                </li>-->
+                                            <li><a href="https://lookinmena.com/scholarships_categories/%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A7%D9%87">دكتوراه</a>
+                                            </li>
+
+                                            <li role="separator" class="divider"></li>
+                                            <!--<li><a href="https://lookinmena.com/universities-profile">جامعات
+                                                                                        ال MENA</a></li>-->
+                                            <li><a href="https://lookinmena.com/universities-profile"> جامعات الـ MENA</a></li>
+
+                                            <li role="separator" class="divider"></li>
+
+                                            <li><a class="nav-link" href="https://lookinmena.com/scholarship-test/">اختبار الحصول على منحة</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!--المنح -->
+
+                                <!--المسابقات -->
+                                <!--<ul class="nav navbar-nav">
+                                            <li class="dropdown">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                            aria-haspopup="true" aria-expanded="false">المسابقات<span
+                                                                    class="caret"></span></a>
+                                                    <ul class="dropdown-menu">
+                                                            <li><a href="#">التصوير</a></li>
+                                                            <li><a href="#">التصميم والرسم</a></li>
+                                                            <li><a href="#">الأفلام</a></li>
+                                                            <li><a href="#">الكتابة والشعر</a></li>
+                                                            <li><a href="#">الهندسة</a></li>
+
+                                                            <li><a href="#">مسابقات أخرى</a></li>
+
+
+                                                    </ul>
+                                            </li>
+                                    </ul>-->
+
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <!--<a href="https://lookinmena.com/online_activities_categories/all/" >المسابقات</a>-->
+                                        <a href="https://lookinmena.com/online_activities_categories/all/"> المسابقات العالمية</a>
+                                    </li>
+                                </ul>
+
+                                <!--المسابقات -->
+                                <!--اختبار -->
+
+                                <!--المقالات -->
+                                <ul class="nav navbar-nav">
+
+                                    <!--<li><a class="nav-link" href="https://lookinmena.com/articles/">مقالات</a></li>-->
+                                    <li><a class="nav-link" href="https://lookinmena.com/articles/">مقالات</a></li>
+
+                                </ul>
+                                <!--المقالات -->
+                                <!--من نحن -->
+                                <ul class="nav navbar-nav">
+
+                                    <!--<li><a class="nav-link" href="https://lookinmena.com/team_members/">من نحن</a></li>-->
+                                    <li><a class="nav-link" href="https://lookinmena.com/team_members/">من نحن</a></li>
+
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li><a class="nav-link link-button" id="lang_en" onclick="change_language(2)">English</a></li>
+                                </ul>
+                                <!--من نحن -->
+                                <!--البحث -->
+
+
+
+                                <!--البحث -->
+
+
+                                <!-- row -->
+
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- container -->
+
+            </nav>
+            <!-- mobile view -->
+            <div class="container mobilehomepage">
+                <div class="row">
+
+
+                    <nav class="navbar navbar-default  navbar-fixed-top" id="sticky-header " style="background-color: #ffff;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        <a href="https://lookinmena.com">
+                                            <img src="https://lookinmena.com/wp-content/themes/lookinmena/assets/images/favicon.png" alt="lookinMENA logo">
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                                        <ul class="nav navbar-nav">
+
+                                            <!--المنح -->
+
+                                            <ul class="nav navbar-nav">
+                                                <li class="dropdown">
+
+                                                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                                aria-haspopup="true" aria-expanded="false">المنح الجامعية <span
+                                                                        class="caret"></span></a>-->
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">المنح الجامعية<span
+                                                                class="caret"></span></a>
+                                                    <ul class="dropdown-menu">
+                                                        <!--<li><a
+                                                                            href="https://lookinmena.com/scholarships_categories/%D8%A8%D9%83%D8%A7%D9%84%D9%88%D8%B1%D9%8A%D9%88%D8%B3">- بكالوريوس</a>
+                                                            </li>-->
+                                                        <li><a href="https://lookinmena.com/scholarships_categories/%D8%A8%D9%83%D8%A7%D9%84%D9%88%D8%B1%D9%8A%D9%88%D8%B3">- بكالوريوس</a>
+                                                        </li>
+                                                        <!--<li><a
+                                                                            href="https://lookinmena.com/scholarships_categories/master">- ماجستير</a>
+                                                            </li>-->
+                                                        <li><a href="https://lookinmena.com/scholarships_categories/master">- ماجستير</a>
+                                                        </li>
+                                                        <!--<li><a
+                                                                            href="https://lookinmena.com/scholarships_categories/%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A7%D9%87">- دكتوراه</a>
+                                                            </li>-->
+                                                        <li><a href="https://lookinmena.com/scholarships_categories/%D8%AF%D9%83%D8%AA%D9%88%D8%B1%D8%A7%D9%87">- دكتوراه</a>
+                                                        </li>
+
+                                                        <li role="separator" class="divider"></li>
+                                                        <!--<li><a href="https://lookinmena.com/universities-profile">- جامعات
+                                                                            ال MENA</a></li>-->
+                                                        <li><a href="https://lookinmena.com/universities-profile">-  جامعات الـ MENA</a></li>
+
+                                                        <li role="separator" class="divider"></li>
+
+                                                        <li><a class="nav-link" href="https://lookinmena.com/scholarship-test/">- اختبار الحصول على منحة</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <!--المنح -->
+
+                                            <ul class="nav navbar-nav">
+                                                <li class="dropdown">
+                                                    <!--<a href="https://lookinmena.com/online_activities_categories/all/" >المسابقات</a>-->
+                                                    <a href="https://lookinmena.com/online_activities_categories/all/"> المسابقات العالمية</a>
+                                                </li>
+                                            </ul>
+                                            <!--المسابقات -->
+                                            <!--المقالات -->
+                                            <ul class="nav navbar-nav">
+
+                                                <!--<li><a class="nav-link" href="https://lookinmena.com/articles/">مقالات</a></li>-->
+                                                <li><a class="nav-link" href="https://lookinmena.com/articles/">مقالات</a></li>
+
+                                            </ul>
+                                            <!--المقالات -->
+                                            <!--من نحن -->
+                                            <ul class="nav navbar-nav">
+
+                                                <!--<li><a class="nav-link" href="https://lookinmena.com/team_members/">من نحن</a></li>-->
+                                                <li><a class="nav-link" href="https://lookinmena.com/team_members/">من نحن</a></li>
+
+                                            </ul>
+                                            <!--من نحن -->
+                                            <ul class="nav navbar-nav">
+                                                <a id="mobile-menu-button" class="waves" href="#"><i class="fa fa-angle-down"></i></a>
+                                                <ul class="menu clearfix" id="menu">
+
+                                                    <!-- ngIf: !is_logged_in -->
+                                                    <li class="login m-t-7" ng-if="!is_logged_in">
+                                                        <!--<a id="sign_in" class="btn bordered" href="#login-form-container">انشئ حساب</a>-->
+                                                        <a id="sign_in" class="btn bordered" href="#login-form-container">أنشئ حساب</a>
+                                                        <div id="login-form-container">
+                                                            <!--<h4 style="box-shadow: 0px 2px 5px 1px grey; background-color: #002626">
+                                                                    إنشاء
+                                                                    حساب مجاني</h4>-->
+                                                            <h4 style="box-shadow: 0px 2px 5px 1px grey; background-color: #002626">إنشاء حساب مجاني</h4>
+                                                            <form class="login-form ng-pristine ng-valid">
+                                                                <fieldset>
+                                                                    <!--<h5>عند إنشاء حساب سيصبح بإمكانك</h5><br>-->
+                                                                    <h5>عند إنشاء حساب سيصبح بإمكانك</h5><br>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="bell-style"><i class="fa fa-bell"></i></div>
+                                                                            <!--<h6 class="h6h6">تحديد الاشعارات التي ترغب باستلامها</h6>-->
+                                                                            <h6 class="h6h6">تحديد الاشعارات التي ترغب باستلامها</h6>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+
+                                                                            <div class="pointer-style"><i class="fa fa-mouse-pointer"></i></div>
+                                                                            <!--<h6 class="h6h6">معرفة طريقة المشاركة بالفرص التعليميةوالترفيهية </h6>-->
+                                                                            <h6 class="h6h6">معرفة طريقة المشاركة بالفرص التعليميةوالترفيهية</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="loglog">
+                                                                        <!--<button class="btn btn-default-1 waves fbColor" ng-click="fb_log()"> أنشئ حساباً عن طريق الفيسبوك <i class="fa fa-facebook"></i></button>
+                                                                            <button class="btn btn-default-1 waves gmColor" ng-click="gm_log()" style="background-color: #bb4232;"> أنشئ حساباً عن طريق الجيميل <i class="fa fa-google"></i></button>-->
+                                                                        <button class="btn btn-default-1 waves fbColor" ng-click="fb_log()">أنشئ حساباً عن طريق الفيسبوك<i class="fa fa-facebook"></i></button>
+                                                                        <button class="btn btn-default-1 waves gmColor" ng-click="gm_log()" style="background-color: #bb4232;">أنشئ حساباً عن طريق الجيميل<i class="fa fa-google"></i></button>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </form>
+                                                        </div>
+                                                        <!-- login-form-container -->
+                                                    </li>
+                                                    <!-- end ngIf: !is_logged_in -->
+
+                                                    <!--profile dropdown-->
+                                                    <li class="profile-dropdown" ng-if="is_logged_in">
+
+                                                        <button class="btn btn-default-1 waves" type="button" data-toggle="dropdown"><img style="width: 50px;" ng-src="{{user_pic}}"> {{user_name}}
+                                                            </button>
+                                                        <ul class="dropdown-menu">
+                                                            <!--<li><a href="/profile">حسابك</a>-->
+                                                            <li><a href="/profile">حسابك</a>
+                                                            </li>
+                                                            <!--<li><a class="hand" ng-click="logout_user()">تسجيل الخروج</a>-->
+                                                            <li><a class="hand" ng-click="logout_user()">تسجيل الخروج</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <!--notifications dropdown-->
+                                                    <li class="notification-dropdown" ng-if="is_logged_in">
+                                                        <button class="btn btn-default-1 waves" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" ng-click="view_noti()">
+                                                                <i class="red_bill" aria-hidden="true" ng-class="{'fa fa-bell-o':unseen_noti == 0, 'fa fa-bell':unseen_noti != 0}">{{unseen_noti != 0?unseen_noti:''}}</i>
+                                                            </button>
+
+                                                        <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel" style="height: 450px;">
+                                                            <div class="notification-heading">
+                                                                <!--<h5 class="menu-title">اشعارات</h5>-->
+                                                                <h5 class="menu-title">اشعارات</h5>
+                                                            </div>
+                                                            <li class="divider"></li>
+                                                            <div id="scrollbar_style" class="notifications-wrapper" style="overflow: auto;height: 85%">
+                                                                <div ng-repeat="noti in user_notifications| orderBy: 'post_created': true" ng-class="{'not_opened': noti.post_opened == 0}">
+                                                                    <a href="{{noti.post_link}}" ng-click="open_noti(noti, $index)">
+                                                                        <div class="notification-item">
+                                                                            <span class="item-title" ng-bind-html="noti.post_title"></span> <small>({{noti.post_type}})</small>
+                                                                        </div>
+                                                                    </a>
+                                                                    <li class="divider"></li>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </ul>
+                                                    </li>
+
+                                                </ul>
+                                            </ul>
+                                            <ul class="nav navbar-nav">
+                                                <li><a class="nav-link" id="lang_en" onclick="change_language(2)">English</a></li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="body_view" ng-controller="uni_profile_controller">
+
+            <!-- PAGE CONTENT -->
+            <div id="page-content" class="scholarships uni_profile_slug" data-id="41287" data-id="41287" data-term_slug="%d9%84%d8%a8%d9%86%d8%a7%d9%86">
+                <!-- PAGE CONTENT -->
+                <div id="page-content" class="third-page">
+                    <!--SATRT Video Section-->
+                    <div class="video-section">
+                        <div class="container text-center">
+                            <video controls=""></video>
+                        </div>
+                    </div>
+
+                    <!--SATRT Video Section-->
+                    <!-- Start   Introduction Section-->
+
+                    <div class=" Introduction">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-sm-7">
+                                    <div class="panel-group" id="accordion-2">
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h3> <b>السؤال الأهم لأي مهنة, ما هي مجالات العمل المتاحة أمامي في حال تخصصت بهذا المجال؟</b></h3>
+                                                <p>قمنا بجمع أكثر مجالات عمل التسويق شيوعاً ضمن منطقة المينا والتي تصلح عالمياً أيضاً وسطي الرواتب: يبدأ من 300$ ويصل حتى 10,000$ شهرياً</p>
+                                            </div>
+                                        </div>
+                                        <!-- panel -->
+                                        <div class="panel">
+                                            <div class="panel-heading w3-container">
+                                                <h5 class="panel-title "> <a data-toggle="collapse" href="#collapse1" aria-expanded="true">التدرج الوظيفي: </a> </h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse1" class="panel-collapse collapse in" aria-expanded="true">
+                                                <div class="panel-body">
+                                                    <p> ١- Executive ٢- Senior ٣- Manager ٤- Head of Department </p>
+
+
+
+
+
+                                                    <p></p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"> <a data-toggle="collapse" href="#collapse2" class="collapsed" aria-expanded="false">
+                                            التسويق التنفيذي Marketing Execution</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p>مهمته كالعازف ضمن الاوركسترا، فكما يقوم العازف بعزف النوطة، يقوم التسويق التنفيذي بقراءة وتنفيذ المهام التسويقية</p>
+
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"> <a data-toggle="collapse" href="#collapse3" class="collapsed" aria-expanded="false">تأليف المحتوى Content Creating</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                                <div class="panel-body">
+                                                    <p></p>
+                                                    <div id="gt-langs">
+                                                        <div id="gt-lang-right" class="goog-inline-block">
+                                                            <p>كتابة سيناريو الإعلانات والفيديوهات، كتابة مقالات، الصياغات الإعلانية, كتابة منشورات السوشال ميديا</p>
+                                                        </div>
+                                                    </div>
+                                                    <p></p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"> <a data-toggle="collapse" href="#collapse4" class="collapsed" aria-expanded="false">إدارة محركات البحث SEO Marketing</a> </h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse4" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>هذا المجال يحتاج خبرة بسيطة (وأحياناً متقدمة) بمجال برمجة المواقع الالكترونية، لأنه يساهم برفع تصنيف الموقع ليظهر ضمن نتائج البحث الأولى بمحركات البحث</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+
+
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse8" class="collapsed" aria-expanded="false">تسويق السوشال ميديا Social Media Marketing</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse8" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p class="ng-binding">وضع الخطط التسويقية وتنفيذها ضمن مواقع التواصل الاجتماعي لزيادة الوعي بالعلامة التجارية ورفع قيمة المبيعات</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title"><a data-toggle="collapse" href="#collapse15" class="collapsed" aria-expanded="false">التسويق الالكتروني Digital/eMarketing</a></h5>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse10" class="collapsed" aria-expanded="false">التحليل التسويقي Marketing Analysis</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse10" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>يهتم بقراءة الاحصائيات بكافة المجالات مثل المبيعات وعدد الزبائن وعدد زوار الويبسايت والسوشال ميديا، وتقديم المقترحات لرفع الأرقام ومتابعة الأداء</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse9" class="collapsed" aria-expanded="false">استراتيجيات التسويق Strategic Marketing</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse9" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p class="ng-binding">إحدى المستويات العُليا بالمؤسسة، مهمتها المشاركة بوضع استراتيجية الشركة بالعمل والخطط المستقبلية كالتوسع وإطلاق خدمات أو منتجات جديدة, وكيفية المنافسة واختراق الأسواق</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <!-- panel-heading -->
+
+                                        <div class="panel">
+
+                                            <div id="collapse15" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>كل ما يخص أنشطة الشركة الأونلاين كمحركات البحث والسوشال ميديا والموقع والبيع الأونلاين وخدمة الزبائن أونلاين</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse11" class="collapsed" aria-expanded="false">إدارة العلاقات العامة PR Management</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse11" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>إدارة سمعة المؤسسة والمحافظة عليها، والتواصل مع الميديا والجهات الحكومية فيما يصب للمصلحة التسويقية للمؤسسة</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse12" class="collapsed" aria-expanded="false">إدارة المنتج Product Management</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse12" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>وضع خطط بناء المنتج والتسعير وكيفية الانتشار ضمن السوق ومراقبة المبيعات والعمل على زيادتها</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+
+
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse16" class="collapsed" aria-expanded="false">إدارة التسويق Marketing Management</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse16" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>إدارة كل ما تم ذكره سابقاً والعمل على تطوير وتحفيز الفريق</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                        <div class="panel">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title"><a data-toggle="collapse" href="#collapse17" class="collapsed" aria-expanded="false">عمل خاص (وكالة إعلانية) أو Freelancer</a></h5>
+                                            </div>
+                                            <!-- panel-heading -->
+                                            <div id="collapse17" class="panel-collapse collapse" aria-expanded="false">
+                                                <div class="panel-body">
+                                                    <p>قد تلجأ بعض الأعمال بالاستعانة بشركة تسويقية لتنفيذ إحدى أقسام التسويق</p>
+                                                </div>
+                                                <!-- panel-body -->
+                                            </div>
+                                            <!-- panel-collapse -->
+                                        </div>
+
+                                    </div>
+
+
+                                    <br>
+                                </div>
+
+
+                                <!-- col -->
+
+                            </div>
+
+                            <hr>
+                        </div>
+                        <!-- row -->
+
+                    </div>
+
+
+
+
+
+                    <!--   End Introduction Section-->
+
+                    <!-- Start Develop myself-->
+
+                    <div class="Develop-myself">
+                        <div class="container">
+
+                            <h3>كيف أطور نفسي؟</h3>
+                            <p>إذا كنت تريد التعلم من الصفر, ننصحك بمتابعة كورسات (مجانية أو مأجورة) تتكلم عن الـ Fundamental أو مقدمة عن بعض المجالات العامة كالسوشال ميديا والتخطيط صياغة المحتوى وكيفية فهم الجمهور والمنتجات والخدمات أما إذا كان التسويق
+                                ليس جديداً عليك, فننصحك بحضور بعض الكورسات الـ Advanced فيما يخص الاستراتيجيات والـ SEO والـ Analysis
+
+                            </p>
+                            <p>وبغض النظر عن مستواك التسويقي, ننصحك بقراءة الكتب, متابعة بعض الشخصيات التسويقية الهامة، وقراءة كل ما هو جديد كي تصبح (وتبقى) خبيراً بهذا المجال</p>
+                            <p>فيما يلي سنذكر أهم المنصات الانكليزية والعربية التي تقدم كورسات بشكل متجدد بالإضافة لشخصيات تسويقية هامة تستحق المتابعة وكتب ومواقع هامة تستحق القراءة
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- End Develop myself-->
+
+                    <!-- start platform-->
+
+                    <div class=" Platforms">
+
+                        <div class="container">
+
+                            <h4>منصات</h4>
+                            <div class="container">
+
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+
+                                        <div class="owl-carousel  rounded-images-carousel coll">
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.linkedin.com/learning/search?keywords=marketing" target="_blank"> <img src="./assets/images/linkedlogo.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.edx.org/learn/marketing" target="_blank"> <img src="./assets/images/edxlogo.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+
+
+
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://alison.com/courses/marketing" target="_blank"> <img src="./assets/images/alisonlogo.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.coursera.org/courses?query=marketing&" target="_blank"> <img src="./assets/images/courseralogo.jpg"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.udemy.com/courses/marketing/?search-query=marketing" target="_blank"> <img src="./assets/images/udemylogo.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.shawacademy.com/courses/marketing/" target="_blank"> <img src="./assets/images/shawaclogo.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.nadrus.com/view-courses?titles=%D8%AA%D8%B3%D9%88%D9%8A%D9%82" target="_blank"> <img src="./assets/images/nadruslogo1.jpg"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://academy.hsoub.com/marketing/" target="_blank"> <img src="./assets/images/hasoub.jpg"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                            <div class="item it">
+                                                <div class="col-sm-12">
+
+                                                    <a href="https://www.maharah.net/courses?category_ids=9" target="_blank"> <img src="./assets/images/maharah.png"></a>
+
+                                                </div>
+                                                <!-- col -->
+
+                                            </div>
+                                            <!-- col -->
+                                        </div>
+                                        <!-- rounded-images-carousel -->
+
+                                    </div>
+                                    <!-- col -->
+                                </div>
+                                <!-- row -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End Platforms-->
+                    <!-- Start Text Point -->
+                    <div class="point">
+                        <div class="container">
+
+                            <h4>إذا أحببت مجالات العمل، هناك بعض الصفات التي يجب أن تكتسبها بشخصيتك</h4>
+                            <h5>من أهم الصفات</h5>
+
+                            <div class="linehr">
+                                <hr>
+                            </div>
+                            <br>
+                            <br>
+                            <i class="fa fa-star "></i><span>قراءة وتحليل الإحصائيات  </span>
+                            <br>
+                            <i class="fa fa-star "></i><span>فهم سلوك الناس Consumer Behaviour</span>
+                            <br>
+                            <i class="fa fa-star "></i><span> الإبداع</span>
+                            <br>
+                            <i class="fa fa-star "></i><span>سرعة البديهة</span>
+                            <br>
+                            <i class="fa fa-star "></i><span>السرد القصصي Storytelling</span>
+
+                        </div>
+                    </div>
+
+                    <!-- End Text Point -->
+                    <!-- Start Influential people-->
+                    <div class="Influentialpeople">
+
+                        <div class="container">
+                            <h4>أهم الأشخاص المؤثرين الذين يستحقون المتابعة</h4>
+                            <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="Influential-people">
+                                        <div class="picture">
+                                            <img class="img-fluid" src="./assets/images/SethGodin.jpg">
+                                        </div>
+                                        <div class="Influential-people-content">
+                                            <h3 class="name">Seth Godin</h3>
+                                            <h4 class="title">
+
+                                                لا تبحث عن زبائن لمنتجاتك، ابحث عن منتجات لزبائنك
+                                            </h4>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="Influential-people">
+                                        <div class="picture">
+                                            <img class="img-fluid" src="./assets/images/Guy%20Kawasaki1.jpg">
+                                        </div>
+                                        <div class="Influential-people-content">
+                                            <h3 class="name">Guy Kawasaki</h3>
+                                            <h4 class="title"> إذا لا يمكنك أن تعبر عن نموذج عملك بـ ١٠ كلمات أو أقل, فأنت غالباً لا تملك نموذج عمل</h4>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="Influential-people">
+                                        <div class="picture">
+                                            <img class="img-fluid" src="./assets/images/Philip%20Kotler.jpg">
+                                        </div>
+                                        <div class="Influential-people-content">
+                                            <h3 class="name">Philip Kotler</h3>
+                                            <h4 class="title">ليس كافياً أن ترضي زبائنك، عليك أن تبهجهم</h4>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                                    <div class="Influential-people">
+                                        <div class="picture">
+                                            <img class="img-fluid" src="./assets/images/Ryan%20Holiday.jpg">
+                                        </div>
+                                        <div class="Influential-people-content">
+                                            <h3 class="name">Ryan Holiday</h3>
+                                            <h4 class="title">الحياة تضعنا باختبارات دائماً, وتصرفاتنا هي الإجابة على هذه الاختبارات</h4>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Influential people-->
+                    <!-- Start Book -->
+                    <div class="Book-header">
+                        <div class="container">
+
+                            <h4> أهم الكتب</h4>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-6">
+
+                                    <div class="owl-carousel  rounded-images-carousel coll">
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/The%20Tipping%20Point%20-%20Malcolm%20Gladwell.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">The Tipping Point - Malcolm Gladwell</h3>
+
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- col -->
+
+                                        </div>
+                                        <!-- col -->
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/The%2022%20Immutable%20Laws%20of%20Marketing%20-%20Al%20Ries,%20Jack%20Trout.png">
+                                                </div>
+                                                <div class="book-content text-center">
+                                                    <h3 class="name">The 22 Immutable Laws of Marketing - Al Ries, Jack Trout
+                                                    </h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- col -->
+
+
+                                        <!-- col -->
+
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/Blue%20Ocean%20Strategy%20-%20W.%20Chan%20Kim,%20Ren%C3%A9e%20Mauborgne.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">Blue Ocean Strategy - W. Chan Kim, Renée Mauborgne</h3>
+
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- col -->
+
+                                        </div>
+
+                                        <!-- col -->
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/Epic%20Content%20Marketing%20-%20Joe%20Pulizzi.png">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">Epic Content Marketing - Joe Pulizzi</h3>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- col -->
+
+
+
+                                        <!-- col -->
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/Growth%20Hacker%20Marketing%20-%20Ryan%20Holiday.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">Growth Hacker Marketing - Ryan Holiday
+                                                    </h3>
+
+                                                </div>
+
+
+                                            </div>
+                                            <!-- col -->
+
+                                        </div>
+                                        <!-- col -->
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/Purple%20Cow%20-%20Seth%20Godin.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">Purple Cow - Seth Godin
+                                                    </h3>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <!-- col -->
+
+
+                                        <!-- col -->
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/The%20Power%20of%20Visual%20Storytelling%20-%20Jessica%20Gioglio,%20Ekaterina%20Walter.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">The Power of Visual Storytelling - Jessica Gioglio, Ekaterina Walter
+                                                    </h3>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <!-- col -->
+
+
+
+                                        <div class="books">
+                                            <div class="col-md-12">
+                                                <div class="picture">
+                                                    <img class="img-fluid" src="./assets/images/Marketing%20Management%20-%20Philip%20Kotler.jpg">
+                                                </div>
+                                                <div class="book-content">
+                                                    <h3 class="name">Marketing Management - Philip Kotler</h3>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                        <!-- about-me-thumbnail -->
+
+
+
+                                    </div>
+                                    <!-- about-me -->
+
+                                </div>
+                                <!-- col -->
+
+                            </div>
+                            <!-- col -->
+
+
+
+
+
+                        </div>
+                        <!-- rounded-images-carousel -->
+
+                    </div>
+                    <!-- col -->
+
+                </div>
+                <!-- row -->
+
+            </div>
+
+        </div>
+
+        <!-- End Book -->
+        <!--Start Textponint2 -->
+        <div class="point2">
+            <div class="container">
+
+                <h4>أكثر التحديات والحالات شيوعاً التي ستواجهها في عملك بمجال الـ Marketing</h4>
+                <ol>
+                    <li> مساعدة فريق المبيعات بأفكار وخطط لزيادة المبيعات</li>
+                    <li>زيادة عدد زوار الموقع وتحقيق Conversion أكبر</li>
+                    <li>خلق حملات وعروض ترويجية لهدف زيادة المبيعات والوعي بالعلامة التجارية</li>
+                    <li>إدارة قنوات السوشال ميديا والنشرات البريدية للمؤسسة</li>
+                    <li> زيادة الحصة السوقية للشركة عن طريق زيادة المبيعات</li>
+                    <li>المحافظة على سمعة المؤسسة وتطويرها، وإدارة أزمات قلة الثقة</li>
+                    <li>التسعير واختيار أماكن تواجد المنتج في السوق</li>
+                    <li> تخطيط وتنفيذ وإدارة حملة ستويقية</li>
+                    <li> المساعدة بالتخطيط لابتكار منتج/خدمة جديدة للسوق</li>
+
+
+                </ol>
+                <hr>
+            </div>
+
+        </div>
+
+
+        <!--End Textponint2 -->
+        <!-- Start Terms-->
+        <div class="term">
+
+
+            <div class="container">
+                <h3 style="color: #e8476f;">مصطلح هام ضمن المجال</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Advertising.png" alt="" />
+                                <h5 class="title">الإعلان Advertising</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text"> تسليط الضوء على خدمة/منتج/عمل بطرق مدفوعة غالباً عن طريق الـ Media مثال: (تصميم صورة مثلاً collage فيها متل إعلان من راديو - تلفزيون - موبايل - طرقي - ….)
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+                        </div>
+
+                        <!----->
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/MarketSegmentation.png" alt="" />
+                                <h5 class="title">تجزئة السوق Market Segmentation</h5>
+
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">تقسيم السوق لشرائح كي يسهل تحديد واستهداف الزبائن المحتملين, وغالباً يتم تقسيمهم وفقاً لـ المنطقة الجغرافية والديموغرافية والسلوكية والنفسية مثال: (تصميم) فيو ٤ حقول عناوينون من اليمين لليسار جغرافياً ديموغرافياً
+                                            سلوكياً نفسياً. وبراس الصفحة مكتوب (جمهور لوك إن مينا) ومذكور ضمن كل حقل …….
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <!----->
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Brand.png" alt="" />
+                                <h5 class="title">علامة تجارية Brand</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">الصفات البصرية والملموسة التي تميز المنتج/الخدمة. مثال: (كوكا كولا)</div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/B2B-Business to Business.png" alt="" />
+                                <h5 class="title">B2B-Business to Business</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">العمل الذي يكون زبائنه أعمال أُخرى مثال: شركات تصنيع الحافلات التي تبيع حافلاتها لمكاتب السفر
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!----->
+                        <div class="col-md-6">
+                            <div class="card barts" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Competitive.png" alt="" />
+                                <h5 class="title">الميزة التنافسية Competitive Advantage</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">ما يميز عملك عن باقي المنافسين مثال: إشعارات لوك إن مينا - الـ CRM - المقالات الداعمة - المسارات
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                        <!----->
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Conversion.png" alt="" />
+                                <h5 class="title">معدل التحويل Conversion Rate</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">
+                                            نسبة الأشخاص الذين يشترون (أو يقومون بما تريده) مقارنة بجميع الزبائن الذين لم يقوموا بذلك مثال: عدد الأشخاص يلي بزوروا خبر منحة بموقع لوك إن مينا, وعدد يلي بيكملوها للأخير وبيضغطوا على زر التسجيل بالمنحة.
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Corporate.png" alt="" />
+                                <h5 class="title">هوية المؤسسة Corporate Identity</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">كل ما يميز المؤسسة من ألوان، شعار, خطوط, تصاميم مثال: لوك إن مينا</div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!----->
+
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Direct.png" alt="" />
+                                <h5 class="title">التسويق المباشر Direct Marketing</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">التسويق بشكل مباشر مع زبائنك بدل من أن يقوم بذلك طرف آخر مثال: المشاركة بالمعارض للاحتكاك بشكل مباشر بالزبائن المحتملين</div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card barts" onclick="this.classList.toggle('expanded')">
+
+                                <img src="./assets/images/E-commerce.png" alt="" />
+                                <h5 class="title">التجارة الالكترونية E-Commerce</h5>
+
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">
+                                            بيع المنتجات أونلاين مثال: المؤلف الموسيقي Yanni يملك متجر الكتروني يبيع من خلاله تيشرت وسيديات <a>https://store.yanni.com/ </a></div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <!----->
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/KPI.png" alt="" />
+                                <h5 class="title">مؤشرات الأداء KPI-Key Performance Indicators</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">معايير لقياس جودة الأداء مثال: - عدد زوار الموقع الشهريين - معدل زيادة الـ Conversion Rate - عدد المقالات المنشورة بايل - طرقي - ….)
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Pricing.png" alt="" />
+                                <h5 class="title">استراتيجيات التسعير Pricing Strategies</h5>
+
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">الطرق التي تقوم المؤسسة بتسعير منجاتها أو خدماتها أمثلة: تسعير الاختراق Penetration - التسعير الاقتصادي Economy - تسعير القشط Skimming
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/MarketResearch.png" alt="" />
+                                <h5 class="title">أبحاث السوق Market Research</h5>
+
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">أبحاث متقدمة عن السوق بهدف تطوير المنتج أو خلق منتجات جديدة
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card barts" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Niche.png" alt="" />
+                                <h5 class="title">سوق مخصصة Niche Market</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">
+                                            قطاع دقيق ومخصص من السوق تقوم المؤسسة باستهدافه مثال: شركة Amazon للبيع بالتجزئية بدأت الـ Niche Market خاصتها ببيع الكتب الجديدة لسكان أميركا, أما الآن فهي تبيع تقريباً كل شيء لأي مكان في العالم.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card barts" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Public.png" alt="" />
+                                <h5 class="title">العلاقات العامة PR-Public Relations</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">بيانات صحفية - مؤتمرات - أنشطة مجتمعية وأي شيء يحافظ على سمعة المؤسسة وعلامتها التجارية
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/Viral.png" alt="" />
+                                <h5 class="title">التسويق الفيروسي Viral Marketing</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">طريقة تسويقية عن طريق نشر إعلان يساهم بإعادة نشره الجمهور بحيث يصل إلى أعداد هائلة من المشاهدين بفترة قصيرة نسبياً:
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <!----->
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/ROl.png" alt="" />
+                                <h5 class="title">العائد على الاستثمار ROI-Return on Investment</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">القيمة المادية التي حققتها مقارنةً بالنقود التي صرفتها لتحقيق هذا العائد, مثال:
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!----->
+
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/" alt="" />
+                                <h5 class="title">المؤثرين Influencers</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">أشخاص مشهورين ومؤثرين ضمن مجالهم تستعين بهم الشركات لترويج خدماتها مثال:
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/" alt="" />
+                                <h5 class="title">الحصة السوقية Market Share: </h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">النسبة المئوية لمبيعات شركة ضمن سوق معينة مثال: الحصة السوقية لتويتر حول العالم لعام ٢٠١٩ بين جميع منصات التواصل الاجتماعي هي 6%
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card " onclick="this.classList.toggle('expanded')">
+                                <h5 class="title">المزيج التسويقي Marketing Mix</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">مجموعة الإجراءات والتكنيك الذي تستعمله الشركة فيما يخص المنتج وسعره وأماكن تواجده وطرق ترويجه, ما يعرف اختصاراً بالـ 4Ps: Product - Price - Place - Promotion
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <div class="card" onclick="this.classList.toggle('expanded')">
+                                <img src="./assets/images/" alt="" />
+                                <h5 class="title">دورة حياة المنتج Product Life Cycle</h5>
+                                <div class="text1">
+                                    <div class="text-content">
+
+                                        <div class="body-text">الكثير من المنتجات تمر بـ ٤ مراحل خلال حياتها وهي على الترتيب: التقديم - النمو - النضج - الرفض. دور فريق التسويق معرفة متى يتم تقديم منتجات جديدة ومتى تبدأ بوقف تصنيع المنتجات التي سيرفضها السوق.
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 35" width="30"><path d="M5 30L50 5l45 25" fill="none" stroke="#000" stroke-width="5"/></svg>
+                            </div>
+
+                        </div>
+
+                        <!----->
+                        <!----->
+                    </div>
+                </div>
+
+                <!----->
+
+
+
+            </div>
+        </div>
+        <!--End Term-->
+        <br>
+        <br>
+        <div class="sectiontest">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="right-test">
+                            <h4>تطبيقات موبايل</h4>
+                            <p> Google Primer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="left-test">
+                            <h4>مواقع مهمة</h4>
+                            <a>https://www.mindtools.com/search?search_term=marketing</a>
+                            <a>https://blog.hubspot.com/marketing
+</a>
+                            <a>https://www.socialmediaexaminer.com/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="left-test">
+
+                            <h4>بعض من الأدوات الشائعة التي يستخدمها المسوقون لتحليل بعض المعطيات</h4>
+                            <a>S.W.O.T Analysis</a><br>
+                            <a>PEST Analysis</a><br>
+                            <a>The Ansoff Matrix</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right-test">
+
+                            <h4>فيديوهات ترفد الموضوع</h4>
+                            <a href="https://www.youtube.com/watch?v=JKIAOZZritk&t=115s">What is Branding ? </a><br>
+                            <a href="https://www.youtube.com/watch?v=9m45nVsvvEY"> Social Media Marketing</a><br>
+                            <a href=" https://www.youtube.com/watch?v=R1oLaazhV6A
+                                ">Difference between Marketing & PR</a><br>
+                            <a href=" https://www.youtube.com/watch?v=fSaOmTqlyXQ
+                                ">Influence Marketing</a><br>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <!--Sectoin -->
+        <div class="container">
+            <section class="full-section half-image" style="padding:100px 0 80px; margin-bottom:0;">
+
+                <div class="half-image-left parallax" data-stellar-background-ratio="0.1" style="background-image:url(./assets/images/undraw_social_expert_07r8.png);">
+
+                    <h4>مواقع مهمة</h4>
+                    <a>https://www.mindtools.com/search?search_term=marketing</a>
+                    <a>https://blog.hubspot.com/marketing
+</a>
+                    <a>https://www.socialmediaexaminer.com/</a>
+
+                </div>
+                <!-- half-image-left -->
+                <div class="full-section-container">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-4">
+
+                                <div class="headline text-center">
+
+                                    <h4>تطبيقات موبايل</h4>
+                                    <p> Google Primer</p>
+
+
+
+                                </div>
+                                <!-- headline -->
+
+
+
+
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- full-section-container -->
+
+            </section>
+            <!-- full-section -->
+
+            <section class="full-section dark-section half-image" style="padding:100px 0 80px;">
+
+                <div class="half-image-right parallax" data-stellar-background-ratio="0.1" style="background-image:url(./assets/images/undraw_goals_w8tw.png);">
+
+                    <img src="images/backgrounds/bg-19.jpg" alt="">
+
+                </div>
+                <!-- half-image-right -->
+
+                <div class="full-section-container">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-offset-7 col-md-4">
+
+                                <div class="headline text-center">
+
+                                    <h4>مواقع مهمة</h4>
+                                    <a>https://www.mindtools.com/search?search_term=marketing</a>
+                                    <a>https://blog.hubspot.com/marketing
+    </a>
+                                    <a>https://www.socialmediaexaminer.com/</a>
+
+                                </div>
+                                <!-- headline -->
+
+
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- full-section-container -->
+
+
+            </section>
+            <!-- full-->
+            <section class="full-section half-image" style="padding:100px 0 80px; margin-bottom:0;">
+
+                <div class="half-image-left parallax" data-stellar-background-ratio="0.1" style="background-image:url(./assets/images/undraw_social_expert_07r8.png);">
+
+                    <img src="images/backgrounds/bg-13.jpg" alt="">
+
+                </div>
+                <!-- half-image-left -->
+                <div class="full-section-container">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-4">
+
+                                <div class="headline text-center">
+
+                                    <h4>بعض من الأدوات الشائعة التي يستخدمها المسوقون لتحليل بعض المعطيات</h4>
+                                    <a>S.W.O.T Analysis</a><br>
+                                    <a>PEST Analysis</a><br>
+                                    <a>The Ansoff Matrix</a>
+
+
+
+                                </div>
+                                <!-- headline -->
+
+
+
+
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- full-section-container -->
+
+            </section>
+            <!-- full-section -->
+            <!-- full-section -->
+
+            <section class="full-section dark-section half-image" style="padding:100px 0 80px;">
+
+                <div class="half-image-right parallax" data-stellar-background-ratio="0.1" style="background-image:url(./assets/images/undraw_goals_w8tw.png);">
+
+                    <img src="images/backgrounds/bg-19.jpg" alt="">
+
+                </div>
+                <!-- half-image-right -->
+
+                <div class="full-section-container">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-offset-7 col-md-4">
+
+                                <div class="headline text-center">
+
+                                    <h4>فيديوهات ترفد الموضوع</h4>
+                                    <a href="https://www.youtube.com/watch?v=JKIAOZZritk&t=115s">What is Branding ? </a><br>
+                                    <a href="https://www.youtube.com/watch?v=9m45nVsvvEY"> Social Media Marketing</a><br>
+                                    <a href=" https://www.youtube.com/watch?v=R1oLaazhV6A
+                                ">Difference between Marketing & PR</a><br>
+                                    <a href=" https://www.youtube.com/watch?v=fSaOmTqlyXQ
+                                ">Influence Marketing</a><br>
+
+
+                                </div>
+                                <!-- headline -->
+
+
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- row -->
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- full-section-container -->
+                <!------>
+
+                <!------>
+                <!-- SCROLL UP -->
+                <a id="scroll-up" class="waves"><i class="fa fa-angle-up"></i></a>
+
+            </section>
+        </div>
+        <br>
+        <br>
+        <!-- FOOTER CONTAINER -->
+        <footer class="probootstrap-footer footer_view" id="footer-container">
+            <div class="probootstrap-backtotop"><a href="#" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="probootstrap-footer-widget">
+                            <h4>تصفح</h4>
+                            <a class="scholars-footer" href="#recent-scholars">المنح الجامعية</a>
+                            <a href="https://lookinmena.com/online_activities_categories/all/">المسابقات العالمية</a>
+                            <a href="https://lookinmena.com/universities-profile/">جامعات الMENA</a>
+                            <a href="https://lookinmena.com/articles/">المقالات</a>
+                            <a href="https://lookinmena.com/scholarship-test/">اختبار الحصول على منحة</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3">
+					<div class="probootstrap-footer-widget">
+						<h4>فريق العمل</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat<a href="#">مشاهدة المزيد</a></p>
+					</div>
+				</div> -->
+                    <!-- col-md-push-1 -->
+                    <div class="col-md-5">
+                        <div class="probootstrap-footer-widget">
+                            <h4>حسابك</h4>
+                            <a class="create-account-footer" href="#login-form-container">أنشئ حساب</a>
+                        </div>
+                        <div class="probootstrap-footer-widget">
+                            <h4>تواصل معنا</h4>
+                            <span><i class="fa fa-envelope"></i> lookinmena@gmail.com</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center border-top">
+                        <ul class="probootstrap-header-social">
+                            <li><a href="https://www.facebook.com/lookinmena"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/lookinmena"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/lookinmena/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC1cGjsNSSh9a_xiFEctxeVg"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                        <p>LookInMENA - 2019 &copy; All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- FOOTER CONTAINER -->
+
+    </div>
+    <!-- MAIN CONTAINER -->
+
+    <!-- LOADING CIRCLE -->
+    <div class="loading">
+        <div id="loading-img"></div>
+    </div>
+
+    <!-- SCROLL UP -->
+    <a id="scroll-up" class="waves"><i class="fa fa-angle-up"></i></a>
+
+
+
+</body>
+
+</html>
+
+
+</section>
+<!-- full-->

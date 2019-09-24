@@ -1,0 +1,473 @@
+/*Start Video Section */
+
+.Video-header {
+margin-top:150px;	
+margin-right: 400px;
+margin-bottom:25px;
+}
+
+/*EndVideo Section */
+
+/* Start   Introduction Section */
+
+
+
+.IntroductionSection{
+	
+	background-color: #fff;
+	height:300px;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+.IntroductionSection h2{
+	color:red;
+}
+
+/* End  Introduction Section */
+
+	/* Start Questions Section */
+	.Questions-Section {
+
+padding-top:50px;
+
+	}
+	.Questions-Section h2{
+		color:red;
+		padding-bottom:10px;
+	}
+
+.Questions-SectionRight ,.Questions-SectionLeft{
+	background-color: #fff;
+}
+.Questions-SectionRight .title{
+	background-color:#ccc;
+	padding:90px;
+
+}
+
+
+
+.Questions-SectionRight .content{
+	padding-top:30px;
+	padding-right:25px;
+	padding-left:15px;
+}
+
+.Questions-SectionLeft .title{
+	background-color:#ccc;
+	padding:90px;
+	margin-right:-27px
+}
+
+
+
+.Questions-SectionLeft .content{
+	padding-top:30px;
+	padding-right:25px;
+	padding-left:15px;
+}
+
+ i{
+	margin-right:80px;
+	color:#648cfe;
+}
+@media (max-width:991px){
+.Questions-SectionLeft {
+	position:absolute;
+	top:150px;
+}
+.Questions-SectionLeft .content ,.Questions-SectionRight .content{
+	padding-top:30px;
+	padding-right:25px;
+	padding-left:15px;
+	padding-bottom:50px;
+}
+}
+
+/* End   Introduction Section */
+
+
+
+/* Start Develop myself*/
+
+
+
+
+
+/* End Develop myself*/
+
+/*Start Platforms */
+.owl-carousel .owl-item img {
+    display: block;
+    width: 50%;
+    -webkit-transform-style: preserve-3d;
+}
+.rounded-images-carousel img {
+    border: none;
+    border-radius: 50%;
+ 
+}
+
+
+
+/*End Platforms */
+
+
+
+/*Start Book */
+
+		
+
+/*End Book */
+/*End Influential people*/
+.Influential-people {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  /* background-color: #f7f5ec; */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.Influential-people .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+
+
+.Influential-people:hover .picture::before {
+  height: 100%;
+}
+
+.Influential-people .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1369ce;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.Influential-people .picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.Influential-people:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.Influential-people .title {
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.Influential-people .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #1369ce;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.Influential-people:hover .social {
+  bottom: 0;
+}
+
+.Influential-people .social li {
+  display: inline-block;
+}
+
+.Influential-people .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.Influential-people .social li a:hover {
+  color: #1369ce;
+  background-color: #f7f5ec;
+}
+/*End Influential people*/
+
+/*Start application and website*/
+
+
+
+
+
+
+
+/*End application and website*/
+
+/*  Start Terms*/
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+	   cursor: pointer;
+}
+.flip-card .flip-card-front h3{
+	margin-top:30%;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #86b5d5;
+  color: white;
+  transform: rotateY(180deg);
+
+}
+.flip-card-back h3{
+	margin-top:25px;
+	font-size:22px;
+		margin-right:20px;
+	margin-left:20px;
+
+}
+.flip-card-back p{
+	margin-top:10px;
+	font-size:16px;
+		margin-right:20px;
+	margin-left:20px;
+}
+@media (min-width:1200px){
+.terms{
+margin-right:20%;
+}
+}
+@media (max-width:1200px){
+.terms{
+margin-left:10%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+}
+@media (max-width:768px){
+.terms{
+margin-right:20%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+}
+
+/*  End Terms*/
+.books {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  /* background-color: #f7f5ec; */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.books .picture {
+  display: inline-block;
+  height: 120px;
+  width: 400px;
+  margin-bottom: 70px;
+  z-index: 1;
+  position: relative;
+}
+
+
+
+
+
+
+.books .picture img {
+  width: 50%;
+  height: 150%;
+  border-radius: 0%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+  margin-left:50px;
+}
+
+
+.books .book-content h3{
+  display: block;
+  font-size: 22px;
+  text-align:center;
+margin-right:5px;
+margin-left:3px;
+}
+
+
+
+
+
+
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  height: 300px;
+  margin: 20px;
+  padding: 0 20px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.025);
+  text-align: center;
+  transition: height 1000ms;
+  width: 260px;
+}
+@media (max-width: 767px) {
+  .card {
+    left: calc(50% - 20px);
+    transform: translateX(-50%);
+  }
+}
+.card.expanded {
+  height: auto;
+}
+
+.text-content {
+
+  transform: translateY(-20000px);
+  transition: transform 10ms;
+}
+.card.expanded .text-content {
+  transform: translateY(-15px);
+}
+.chevron {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
+}
+.card.expanded .chevron {
+  transform: rotate(0deg);
+}
+.title {
+  
+font-weight: 900;
+  
+margin: 20px 0 12px;
+  
+padding-top:80px;
+}
+.body-text {
+padding-top:25px;
+padding-bottom:30px;
+}
+
+
+.text-folder-section{
+	background-color: #ccc;
+	height: 1800px;
+}
+.right-section  {
+	border-left :1px solid #fff;
+	margin-top:20px;
+	padding-bottom:20px;
+	margin-left:-15px
+}
+
+.right-section {
+		 margin-top:20px;
+height:250px;
+	border-bottom:1px solid #816565;
+	border-bottom-width:1px;
+}
+
+.left-section {
+		 
+	height:250px;
+	border-bottom:1px solid #3f2c2c;
+	border-bottom-width:1px;
+padding-right
+}
+.left-section h3{
+	margin-top:20px;
+	margin-right:15p;
+	margin-left:25px;
+}
+.left-section p{
+		margin-left:25px;
+}
+.right-section h3{
+	
+	padding-right:20px;
+		margin-left:-15px
+}
+.right-section p{
+	padding-right:20px;
+		margin-left:5px
+}
+.barts{
+	width:100%
+}
+@media (max-width:991px){
+
+	.barts{
+	width:260px;
+}
+}
+
+.Introduction{
+	padding-top:50%;
+}
